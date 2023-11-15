@@ -15,6 +15,10 @@ import Network from "hsd/lib/protocol/network.js";
 import ChainEntry from "hsd/lib/blockchain/chainentry.js";
 import NodeClient from "hsd/lib/client/node.js";
 
+import dotenv from "dotenv";
+const __dirname = url.fileURLToPath(new URL(".", import.meta.url));
+dotenv.config({ path: path.join(__dirname, "../.env") });
+
 sourceMapSupport.install();
 installGlobals();
 
@@ -38,7 +42,7 @@ const hnsData = {
   currentHeight: 0,
 };
 
-const network = Network.get(process.env.HSD_NETWORK || "mainnet");
+const network = Network.get(process.env.HSD_NETWORK || "main");
 const nodeClient = new NodeClient({
   network: network.type,
   port: network.rpcPort,
