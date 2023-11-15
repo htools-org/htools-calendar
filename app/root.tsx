@@ -23,6 +23,13 @@ export default function App() {
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        {process.env.NODE_ENV === 'production' ? (
+          <script
+            async
+            src='https://umami.htools.work/u.js'
+            data-website-id='0717651d-71a5-408c-91bf-71f097c4e30c'
+          ></script>
+        ) : null}
         <Meta />
         <Links />
       </head>
