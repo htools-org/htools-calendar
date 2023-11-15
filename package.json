@@ -1,22 +1,33 @@
 {
-  "name": "hs-countdown",
+  "name": "htools-calendar",
   "private": true,
   "sideEffects": false,
   "type": "module",
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev --manual",
-    "start": "remix-serve ./build/index.js",
+    "dev-old": "remix dev --manual",
+    "dev-old2": "remix dev -c './server/index.js'",
+    "start-old": "remix-serve ./build/index.js",
+    "dev": "remix dev --manual -c \"node --watch server/index.js\"",
+    "start": "cross-env NODE_ENV=production node ./server/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "@remix-run/css-bundle": "^2.2.0",
     "@remix-run/node": "^2.2.0",
     "@remix-run/react": "^2.2.0",
     "@remix-run/serve": "^2.2.0",
+    "dayjs": "^1.11.10",
+    "framer-motion": "^10.16.5",
+    "hsd": "^6.1.1",
     "isbot": "^3.6.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-confetti": "^6.1.0",
+    "react-dom": "^18.2.0",
+    "react-use": "^17.4.0",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2"
   },
   "devDependencies": {
     "@remix-run/dev": "^2.2.0",
