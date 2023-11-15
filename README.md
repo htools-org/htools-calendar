@@ -1,18 +1,17 @@
-# Welcome to Remix!
+# HTools Calendar
 
-- [Remix Docs](https://remix.run/docs)
+## https://calendar.htools.work/
 
-## Development
 
-From your terminal:
+### Develop
 
+This starts your app in development mode, rebuilding assets on file changes.
 ```sh
 npm run dev
 ```
 
-This starts your app in development mode, rebuilding assets on file changes.
 
-## Deployment
+### Deploy
 
 First, build your app for production:
 
@@ -26,13 +25,7 @@ Then run the app in production mode:
 npm start
 ```
 
-Now you'll need to pick a host to deploy it to.
 
-### DIY
+## Contributing
 
-If you're familiar with deploying node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `remix build`
-
-- `build/`
-- `public/build/`
+Contributions are always welcome! However, please create an issue before starting any work so there won't be any repeated/wasted effort.
